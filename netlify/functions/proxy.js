@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {
-  const targetBase = process.env.API_TARGET || 'https://citybackend-production.up.railway.app';
+  const targetBase = 'https://citybackend-production.up.railway.app';
   const path = event.path.replace(/^\/api/, '') || '/';
   const query = event.queryStringParameters
     ? `?${new URLSearchParams(event.queryStringParameters).toString()}`

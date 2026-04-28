@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || import.meta.env.REACT_APP_API_URL || '/api';
+const baseURL = 'https://citybackend-production.up.railway.app';
 const api = axios.create({ baseURL });
 
 api.interceptors.request.use((config) => {
