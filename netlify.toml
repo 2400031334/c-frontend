@@ -6,7 +6,6 @@
   from = "/api/*"
   to = "https://citybackend-production.up.railway.app/:splat"
   status = 200
-  force = true
 
 [[redirects]]
   from = "/*"
