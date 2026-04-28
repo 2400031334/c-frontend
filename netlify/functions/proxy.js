@@ -1,6 +1,8 @@
 exports.handler = async function (event, context) {
   const targetBase = 'https://citybackend-production.up.railway.app';
-  const path = event.path.replace(/^\/api/, '') || '/';
+  const path = event.path
+    .replace(/^\/api/, '')
+    .replace(/^\/\.netlify\/functions\/proxy/, '') || '/';
   const query = event.queryStringParameters
     ? `?${new URLSearchParams(event.queryStringParameters).toString()}`
     : '';
